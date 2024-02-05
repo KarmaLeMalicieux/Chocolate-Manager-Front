@@ -6,7 +6,7 @@ function App() {
   const [chocolate, setChocolate] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3000/")
+    fetch(import.meta.env.URL)
       .then((response) => response.json())
       .then((data) => {
         setChocolate(data);
